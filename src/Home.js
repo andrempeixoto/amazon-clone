@@ -15,7 +15,7 @@ function Home() {
         <div className="home__row">
           <Product
             image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
-            title="The lean startup"
+            title="The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses"
             vendor="Amazon"
             price={19}
             rating={5}
