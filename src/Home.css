@@ -1,4 +1,14 @@
-.home__container {
+.home {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: 1500px;
+}
+
+.home__row {
+  display: flex;
+  z-index: 1;
+  margin: auto 5px;
 }
 
 .home__image {

@@ -1,5 +1,6 @@
 .header {
   height: 60px;
+  min-width: 600px;
   display: flex;
   align-items: center;
   background-color: #131921;
@@ -29,6 +30,7 @@
   border-radius: 4px 0 0 4px;
   /* outline-color: #ff9900; */
   width: 100%;
+  min-width: 100px;
 }
 
 .header__searchIcon {
