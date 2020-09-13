@@ -32,7 +32,6 @@
 }
 
 .product__price {
-  /* margin-top: 8px; */
   font-size: 1.5em;
 }
 
@@ -54,11 +53,12 @@
 .product button {
   background-color: #f3a847;
   border: 1px solid;
+  border-radius: 4px;
   margin-top: 5em;
   margin-bottom: 0.2em;
   align-self: center;
-  padding: 2px 6px;
+  padding: 4px 8px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
-  outline: none;
+  /* outline: none; */
 }

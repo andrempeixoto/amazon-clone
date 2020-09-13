@@ -63,6 +63,10 @@
   margin: auto 10px auto 6px;
 }
 
+.header a {
+  text-decoration: none;
+}
+
 .header__nav {
   display: flex;
   justify-content: space-evenly;

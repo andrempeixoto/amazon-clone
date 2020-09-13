@@ -14,6 +14,7 @@ function Home() {
 
         <div className="home__row">
           <Product
+            id="87198210"
             image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
             title="The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses"
             vendor="Amazon"
@@ -21,6 +22,7 @@ function Home() {
             rating={5}
           />
           <Product
+            id="02984038"
             image="https://images-na.ssl-images-amazon.com/images/I/41CRnvYqmqL._AC_SX184_.jpg"
             title="Echo Dot (3rd Gen) - Smart speaker with Alexa"
             vendor="Amazon"
@@ -31,6 +33,7 @@ function Home() {
 
         <div className="home__row">
           <Product
+            id="70284194"
             image="https://images-na.ssl-images-amazon.com/images/I/31dYBKysp6L._AC_SX184_.jpg"
             title="Ring Indoor Cam, Works with Alexa - White"
             vendor="Ring"
@@ -38,6 +41,7 @@ function Home() {
             rating={4}
           />
           <Product
+            id="62062318"
             image="https://images-na.ssl-images-amazon.com/images/I/31l2mq9kTHL._AC_SX184_.jpg"
             title="Echo Frames - Eyeglasses with Alexa - Black"
             vendor="Amazon"
@@ -45,6 +49,7 @@ function Home() {
             rating={0}
           />
           <Product
+            id="31936078"
             image="https://m.media-amazon.com/images/I/61moEqqnwzL._AC_UY218_.jpg"
             title="Kindle Oasis – Now with adjustable warm light"
             vendor="Amazon"
@@ -55,6 +60,7 @@ function Home() {
 
         <div className="home__row">
           <Product
+            id="10862957"
             image="https://m.media-amazon.com/images/I/81v90JtbImL._AC_UY218_.jpg"
             title='Samsung CJ89 43" Curved UltraWide 3840 X 1200 Resolution 120Hz Monitor'
             vendor="Samsung Store"
