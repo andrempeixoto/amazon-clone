@@ -1,43 +1,49 @@
 export const initialState = {
-  basket: [],
+  cart: [],
 };
 
 // Selector
-export const getBasketTotal = (basket) =>
-  basket?.reduce((amount, item) => item.price + amount, 0);
+export const getCartTotal = (cart) =>
+  cart?.reduce((amount, item) => item.price + amount, 0);
 
 // the ruducer is always listening to a dispacher
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
-    case "ADD_TO_BASKET":
+    case "ADD_TO_CART":
       return {
         ...state,
-        basket: [...state.basket, action.item],
+        cart: [...state.cart, action.item],
       };
 
-    case "REMOVE_FROM_BASKET":
+    case "REMOVE_FROM_CART":
       // return {
       //   ...state,
-      //   basket: state.basket.filter((item) => item.id !== action.id),
+      //   cart: state.cart.filter((item) => item.id !== action.id),
       // };
 
-      const index = state.basket.findIndex(
-        (basketItem) => basketItem.id === action.id
+      const index = state.cart.findIndex(
+        (cartItem) => cartItem.id === action.id
       );
-      let newBasket = [...state.basket];
+      let newCart = [...state.cart];
 
       if (index >= 0) {
-        newBasket.splice(index, 1);
+        newCart.splice(index, 1);
       } else {
         console.warn(
-          `Can't remove product (id: ${action.id}) as it's not in the basket!`
+          `Can't remove product (id: ${action.id}) as it's not in the cart!`
         );
       }
 
       return {
         ...state,
-        basket: newBasket,
+        cart: newCart,
+      };
+
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
       };
 
     default:

@@ -38,6 +38,7 @@
   height: 26px !important;
   background-color: #febd69;
   border-radius: 0 4px 4px 0;
+  cursor: pointer;
 }
 
 .header__searchIcon:hover {
@@ -53,14 +54,19 @@
   font-weight: 800;
 }
 
-.header__optionBasket {
+.header__optionCart {
   display: flex;
+  margin-left: 6px;
+  margin-right: 3px;
+  height: 30px;
   align-items: center;
   color: white;
 }
 
-.header__basketCount {
+.header__cartCount {
   margin: auto 10px auto 6px;
+  color: #f08804;
+  font-size: 15px;
 }
 
 .header a {
