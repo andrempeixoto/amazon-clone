@@ -27,12 +27,19 @@
   height: 30px;
   border: 1px solid;
   margin-top: 0.4em;
-  border-color: #a88734 #9c7e31 #846a29;
-  color: #111;
+  border-color: #cba957 #bf942a #aa8326;
   font-size: 85%;
   cursor: pointer;
+  outline: none;
+  font-family: Arial, sans-serif;
 }
 
 .subtotal > button:hover {
   background-image: linear-gradient(to bottom, #f3d281 0%, #eeba37 100%);
+  border-color: #c59f43 #aa8326 #957321;
+}
+
+.subtotal > button:active {
+  border-style: inset;
+  border-color: #aa8326 #bf943a #bf942a;
 }
