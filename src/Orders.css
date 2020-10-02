@@ -1,0 +1,14 @@
+.orders {
+  width: 920px;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.orders > h2 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 24px auto;
+}

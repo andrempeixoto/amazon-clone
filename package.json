@@ -13,12 +13,14 @@
     "axios": "^0.20.0",
     "firebase": "^7.20.0",
     "firebase-tools": "^8.10.0",
+    "moment": "^2.29.0",
     "react": "^16.13.1",
     "react-currency-format": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "react-stripe-elements": "^6.1.2"
+    "react-stripe-elements": "^6.1.2",
+    "stripe": "^8.103.0"
   },
   "scripts": {
     "start": "react-scripts start",

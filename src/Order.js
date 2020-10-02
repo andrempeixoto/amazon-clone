@@ -7,11 +7,36 @@ import CurrencyFormat from "react-currency-format";
 function Order({ order }) {
   return (
     <div className="order">
-      <h2>Order</h2>
-      <p>{moment.unix(order.data.created).format("MMMM Do YYYY, h:mma")}</p>
-      <p className="order__id">
-        <small>{order.id}</small>
-      </p>
+      <div className="order__header">
+        <div className="order__title">
+          <small>ORDER PLACED</small>
+          <p>{moment.unix(order.data.created).format("MMMM DD, YYYY")}</p>
+        </div>
+
+        <div className="order__title">
+          <CurrencyFormat
+            renderText={(value) => (
+              <>
+                <small className="order__total">TOTAL</small>
+                <p>{value}</p>
+              </>
+            )}
+            decimalScale={2}
+            value={order.data.amount / 100}
+            displayType={"text"}
+            thousandSeparator={true}
+            prefix={"$"}
+          />
+        </div>
+
+        <div className="order__title">
+          <p className="order__id">
+            <small>ORDER ID</small>
+            <p>{order.id}</p>
+          </p>
+        </div>
+      </div>
+
       {order.data.cart?.map((item) => (
         <CheckoutProduct
           id={item.id}
@@ -21,16 +46,6 @@ function Order({ order }) {
           rating={item.rating}
         />
       ))}
-      <CurrencyFormat
-        renderText={(value) => (
-          <h3 className="order__total">Order Total: {value}</h3>
-        )}
-        decimalScale={2}
-        value={order.data.amount / 100}
-        displayType={"text"}
-        thousandSeparator={true}
-        prefix={"$"}
-      />
     </div>
   );
 }
