@@ -89,73 +89,82 @@ function Payment() {
           alt=""
         />
       </div>
+
       <div className="payment__container">
-        <h1>
-          Checkout{" "}
-          <small>
-            (<Link to="/checkout">{cart?.length} items</Link>)
-          </small>
-        </h1>
+        <div className="payment__container__left">
+          <h1>
+            Review your order{" "}
+            <small>
+              (<Link to="/checkout">{cart?.length} items</Link>)
+            </small>
+          </h1>
 
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>Shipping Address</h3>
+          <div className="payment__section">
+            <div className="payment__title">
+              <h3>Shipping address</h3>
+            </div>
+
+            <div className="payment__address">
+              <p>{user?.email}</p>
+              <p>123 React Lane</p>
+              <p>Developers City, WB</p>
+            </div>
           </div>
 
-          <div className="payment__address">
-            <p>{user?.email}</p>
-            <p>123 React Lane</p>
-            <p>Developers City, WB</p>
-          </div>
-        </div>
-
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>Review your cart and delivery address</h3>
-          </div>
-          <div className="payment__items">
-            {cart.map((item) => (
-              <CheckoutProduct
-                id={item.id}
-                image={item.image}
-                title={item.title}
-                vendor={item.vendor}
-                price={item.price}
-                rating={item.rating}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>Payment Method</h3>
-          </div>
-
-          <div className="payment__details">
-            <form onSubmit={handleSubmit}>
-              <CardElement onChange={handleChange} />
-
-              <div className="payment__priceContainer">
-                <CurrencyFormat
-                  renderText={(value) => <h3>Order Total: {value}</h3>}
-                  decimalScale={2}
-                  value={getCartTotal(cart)}
-                  displayType={"text"}
-                  thousandSeparator={true}
-                  prefix={"$"}
+          <div className="payment__section">
+            <div className="payment__title">
+              <h3>Your cart</h3>
+            </div>
+            <div className="payment__items">
+              {cart.map((item) => (
+                <CheckoutProduct
+                  id={item.id}
+                  image={item.image}
+                  title={item.title}
+                  vendor={item.vendor}
+                  price={item.price}
+                  rating={item.rating}
                 />
+              ))}
+            </div>
+          </div>
+        </div>
 
-                <button disabled={processing || disabled || succeeded}>
-                  <span>
-                    {processing ? <p>Processing</p> : "Place your order"}
-                  </span>
-                </button>
-              </div>
+        <div className="payment__container__right">
+          <div className="payment__section">
+            <div className="payment__title">
+              <h3>Payment method</h3>
+            </div>
 
-              {/* Errors */}
-              {error && <div className="payment__error">{error}</div>}
-            </form>
+            <div className="payment__details">
+              <form onSubmit={handleSubmit}>
+                <CardElement onChange={handleChange} />
+
+                <div className="payment__priceContainer">
+                  <CurrencyFormat
+                    renderText={(value) => <h3>Order total: {value}</h3>}
+                    decimalScale={2}
+                    value={getCartTotal(cart)}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={"$"}
+                  />
+
+                  <button disabled={processing || disabled || succeeded}>
+                    <span>
+                      {processing ? (
+                        <p>Processing</p>
+                      ) : (
+                        "Place your order in USD"
+                      )}
+                    </span>
+                  </button>
+                </div>
+
+                {/* Errors */}
+                {error && <div className="payment__error">{error}</div>}
+              </form>
+            </div>
           </div>
         </div>
       </div>

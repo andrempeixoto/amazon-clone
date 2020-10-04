@@ -10,37 +10,48 @@ body {
   font-size: 13px;
 }
 
-.payment__header,
-.payment__container {
-  padding: 20px 24px;
+.payment__header {
+  padding: 20px 40px;
 }
 
-.payment__container > h1 {
+.payment__container {
+  padding: 20px 24px;
+  display: flex;
+}
+
+.payment__container__left {
+  padding: 0 18px;
+  flex: 0.8;
+}
+
+.payment__container__left > h1 {
+  margin-bottom: 13px;
   padding-bottom: 4px;
-  font-size: 28px;
+  font-size: 21px;
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
 }
 
-.payment__container > h1 > small {
+.payment__container__left > h1 > small {
   font-size: 60%;
 }
 
-.payment__container > h1 > small a {
+.payment__container__left > h1 > small a {
   text-decoration: none;
   color: #0066c0;
 }
 
-.payment__container > h1 > small a:hover {
+.payment__container__left > h1 > small a:hover {
   text-decoration: underline;
 }
 
 .payment__section {
   display: flex;
+  margin: 0 0 10px;
   padding: 20px;
-  padding-left: 0;
-  border-bottom: 1px solid #e7e7e7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 .payment__title {
@@ -51,4 +62,58 @@ body {
 .payment__items,
 .payment__details {
   flex: 0.8;
+}
+
+.payment__container__right {
+  flex: 0.2;
+  margin-top: 42px;
+}
+
+.payment__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18em;
+  height: 6em;
+  margin-left: 0.4em;
+  padding: 1.4em;
+}
+
+.payment__details > form > div > button {
+  margin-top: 1em;
+  background-image: linear-gradient(
+    to bottom,
+    #faecc8 0%,
+    #f5d995 5%,
+    #f0c455 100%
+  );
+  border-radius: 4px;
+  width: 100%;
+  height: 35px;
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  cursor: pointer;
+  outline: none;
+  font-family: Arial, sans-serif;
+  padding: 0.5px 10px 0 11px;
+}
+
+.payment__details > form > div > button:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #faecc8 0%,
+    #f3d281 5%,
+    #eeba37 100%
+  );
+}
+
+.payment__details > form > div > button:active {
+  border-style: inset;
+  border-color: #e77600;
+  box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.5);
+}
+
+.payment__details > form > div > button:disabled {
+  background-image: linear-gradient(to bottom, #e6e9ef 0%, #d9dce1 100%);
+  border-color: #adb1b8 #a2a6ac #8d9096;
 }
