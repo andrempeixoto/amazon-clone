@@ -150,7 +150,7 @@ function Payment() {
                     prefix={"$"}
                   />
 
-                  <button disabled={processing || disabled || succeeded}>
+                  <button disabled={processing || disabled || succeeded || error}>
                     <span>
                       {processing ? (
                         <p>Processing</p>

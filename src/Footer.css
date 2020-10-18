@@ -1,0 +1,131 @@
+.footer__a {
+  text-decoration: none;
+}
+
+.footer__backToTop {
+  background-color: #37475a;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  line-height: 19px;
+  font-size: 13px;
+}
+
+.footer__backToTop:hover {
+  background-color: #485769;
+}
+
+.footer__backToTop {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__container {
+  background-color: #232f3e;
+}
+
+.footer__content {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  gap: 100px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer__content > .footer__column {
+  padding: 0 10px;
+  max-width: 223px;
+}
+
+.footer__content > .footer__column:nth-child(1) {
+  min-width: 117px;
+}
+
+.footer__content > .footer__column:nth-child(2) {
+  min-width: 170px;
+}
+
+.footer__content > .footer__column:nth-child(3) {
+  min-width: 203px;
+}
+
+.footer__content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #fff;
+}
+
+.footer__content li {
+  list-style-type: none;
+  margin-left: -40px;
+}
+
+.footer__content a {
+  font-size: 14px;
+  line-height: 25px;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer__content a:hover {
+  text-decoration: underline;
+}
+
+.footer__line {
+  background-color: #232f3e;
+  border-top: 1px solid #3a4553;
+}
+
+.footer__author {
+  background-color: #232f3e;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  color: #ddd;
+  font-size: small;
+  text-align: center;
+}
+
+.footer__author img {
+  display: block;
+  width: 76px;
+  object-fit: contain;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.footer__author a {
+  text-decoration: none;
+  color: #999;
+}
+
+.footer__author a:hover {
+  text-decoration: underline;
+}
+
+.footer__bottom {
+  background-color: #131a22;
+}
+
+.footer__bottom li {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 7.2px;
+  color: #999;
+  font-size: 12px;
+}
+
+.footer__bottom a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer__bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer__bottom > .footer__column {
+  width: fit-content;
+  margin: auto;
+}

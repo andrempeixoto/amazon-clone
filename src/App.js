@@ -11,6 +11,8 @@ import { useStateValue } from "./StateProvider";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Orders";
+import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 
 const promise = loadStripe(
   "pk_test_51HUgDxEMJfIbMHegSbiDo212rUwwoaEyzoqqofaWtscyNxJYgx1IbdgKaFYiSRXJjtrjjkCE23pSoFYbjT2cZxRK00qVGNnQxa"
@@ -44,11 +46,13 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <Switch>
           <Route path="/" exact>
             <Header />
             <Home />
+            <Footer />
           </Route>
           <Route path="/login">
             <Login />
