@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStateValue } from "./StateProvider";
 import "./CustomerCard.css"
+import { capitalizeFirstLetter } from "./Header"
 
 function CustomerCard() {
   const [{ user }, dispatch] = useStateValue();
@@ -12,14 +13,7 @@ function CustomerCard() {
       <img src="https://www.amazon.com/avatar/default?customer_id=amzn1.account.AHL323NH6C3IFHLBWQPJK7HC7T2A&max_width=60&max_height=60&square=true" alt="customer-avatar"/>
 
       <div className="customerCard__greeting">
-      <h2>Hi, {user ? user.email.match(/^([^@]*)@/)[1] : "Guest"}
-
-      {/* str.slice(str.lastIndexOf('@') 0) */}
-        
-        
-        </h2>
-
-        {/* <h2>Hi, Andre</h2> */}
+        <h2>Hi, {user ? capitalizeFirstLetter(user.email.match(/^([^@]*)@/)[1]) : "Guest"}</h2>
         <p>Customer since 2020</p>
       </div>
       

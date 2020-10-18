@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 
+export const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function Header() {
   const [{ cart, user }, dispatch] = useStateValue();
 
@@ -19,7 +23,7 @@ function Header() {
     <div className="header" id="top">
       <Link to="/">
         <img
-          className="header__logo"
+          className="header__option header__logo"
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
           alt="logo-img"
         />
@@ -33,7 +37,7 @@ function Header() {
         <Link to={!user && "/login"}>
           <div onClick={handleAuthentication} className="header__option">
             <span className="header__optionLineOne">
-              Hello {user ? user.email : "Guest"}
+              Hello, {user ? capitalizeFirstLetter(user.email.match(/^([^@]*)@/)[1]) : "Guest"}
             </span>
             <span className="header__optionLineTwo">
               {user ? "Sign Out" : "Sign In"}
@@ -54,8 +58,8 @@ function Header() {
         </div>
 
         <Link to="/checkout">
-          <div className="header__optionCart">
-            <ShoppingCartSharpIcon />
+          <div className="header__option header__optionCart">
+            <span><ShoppingCartSharpIcon /></span>
             <span className="header__optionLineTwo header__cartCount">
               {cart?.length}
             </span>
