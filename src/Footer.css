@@ -81,9 +81,9 @@
 .footer__author {
   background-color: #232f3e;
   padding-top: 30px;
-  padding-bottom: 15px;
+  padding-bottom: 19px;
   color: #ddd;
-  font-size: small;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -92,7 +92,7 @@
   width: 76px;
   object-fit: contain;
   margin: auto;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .footer__author a {

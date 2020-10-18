@@ -1,4 +1,5 @@
 import React from "react";
+import CustomerCard from "./CustomerCard";
 import "./Home.css";
 import Product from "./Product";
 
@@ -14,16 +15,7 @@ function Home() {
         />
 
         <div className="home__row">
-        <Product
-            id={Math.floor(
-              Math.random() * (89999999 - 80000000 + 1) + 80000000
-            )}
-            image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
-            title="The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses"
-            vendor="Amazon"
-            price={19.99}
-            rating={5}
-          />
+          <CustomerCard />
 
           <Product
             id={Math.floor(

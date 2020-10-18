@@ -10,7 +10,7 @@
 .home__row {
   display: flex;
   z-index: 1;
-  margin: auto 5px;
+  margin: auto 10px;
 }
 
 .home__image {
