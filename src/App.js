@@ -14,6 +14,7 @@ import Orders from "./Orders";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 
+
 const promise = loadStripe(
   "pk_test_51HUgDxEMJfIbMHegSbiDo212rUwwoaEyzoqqofaWtscyNxJYgx1IbdgKaFYiSRXJjtrjjkCE23pSoFYbjT2cZxRK00qVGNnQxa"
 );
