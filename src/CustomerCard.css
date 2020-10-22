@@ -16,7 +16,7 @@
 }
 
 .customerCard__header .customerCard__greeting {
-  padding: 0 20px;
+  padding: 0 15px;
   margin-bottom: 10px;
 }
 
@@ -32,9 +32,30 @@
 .customerCard__body > p {
   font-size: 13px;
   font-weight: 700;
+  margin: 0 0 8px;
 }
 
-/* .customerCard__categoryBox {
+.customerCard__categories {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.customerCard__category-box {
+  display: block;
+  margin-bottom: 2px;
+  margin-right: 2px;
+
+  position: relative;
+  float: left;
+  width: 49.5%;
+  height: 130px;
+
+  width: 130px;
+  height: 130px;
+}
+
+.customerCard__category-box-overlay {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -42,9 +63,22 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-} */
+}
 
-.customerCard__categories {
-  display: flex;
-  flex-direction: row;
+.customerCard__category-image {
+  margin: 10px 5px;
+  width: 130px;
+  height: 90px;
+  position: relative;
+}
+
+.customerCard__category-label {
+  max-height: 36px;
+  font-size: 12px;
+  line-height: 18px;
+  width: 100%;
+  text-align: center;
+  bottom: 20px;
+  position: relative;
+  transform: translateY(50%);
 }
