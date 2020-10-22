@@ -98,7 +98,7 @@ function CustomerCard() {
               <p className="customerCard__category-label">Home Holiday Guide</p>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
