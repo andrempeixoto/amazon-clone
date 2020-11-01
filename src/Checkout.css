@@ -1,7 +1,6 @@
 .checkout {
   display: flex;
   padding: 20px;
-  background-color: white;
   height: max-content;
 }
 
@@ -12,6 +11,10 @@
 
 .checkout__title {
   margin-right: 10px;
-  padding: 10px;
-  border-bottom: 1px solid lightgray;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dddddd;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #0f1111;
 }
