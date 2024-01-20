@@ -1,22 +1,21 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css";
-import Header from "./Header";
-import Home from "./Home";
-import Checkout from "./Checkout";
-import Login from "./Login";
-import Payment from "./Payment";
-import { auth } from "./firebase";
-import { useStateValue } from "./StateProvider";
-import { loadStripe } from "@stripe/stripe-js";
-import { Elements } from "@stripe/react-stripe-js";
-import Orders from "./Orders";
-import Footer from "./Footer";
-import ScrollToTop from "./ScrollToTop";
-
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './App.css';
+import Header from './Header';
+import Home from './Home';
+import Checkout from './Checkout';
+import Login from './Login';
+import Payment from './Payment';
+import { auth } from './firebase';
+import { useStateValue } from './StateProvider';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import Orders from './Orders';
+import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
 
 const promise = loadStripe(
-  "pk_test_51HUgDxEMJfIbMHegSbiDo212rUwwoaEyzoqqofaWtscyNxJYgx1IbdgKaFYiSRXJjtrjjkCE23pSoFYbjT2cZxRK00qVGNnQxa"
+  'pk_test_51HUgDxEMJfIbMHegSbiDo212rUwwoaEyzoqqofaWtscyNxJYgx1IbdgKaFYiSRXJjtrjjkCE23pSoFYbjT2cZxRK00qVGNnQxa'
 );
 
 function App() {
@@ -26,24 +25,24 @@ function App() {
     // will run only once when the App component loads
 
     auth.onAuthStateChanged((authUser) => {
-      console.log("THE USER IS >>> ", authUser);
+      console.log('THE USER IS >>> ', authUser);
 
       if (authUser) {
         // the user just logged in || the user was logged in
 
         dispatch({
-          type: "SET_USER",
+          type: 'SET_USER',
           user: authUser,
         });
       } else {
         //the user is logged out
         dispatch({
-          type: "SET_USER",
+          type: 'SET_USER',
           user: null,
         });
       }
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <Router>

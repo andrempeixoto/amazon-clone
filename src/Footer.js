@@ -1,5 +1,5 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css';
 
 function Footer() {
   return (
@@ -12,7 +12,7 @@ function Footer() {
           <div className="footer__column">
             <h3>Get to Know Us</h3>
             <ul>
-              <li class="footer__link">
+              <li className="footer__link">
                 <a href="#">Careers</a>
               </li>
               <li>
@@ -30,7 +30,7 @@ function Footer() {
               <li>
                 <a href="#">Amazon Devices</a>
               </li>
-              <li class="nav_last">
+              <li className="nav_last">
                 <a href="#">Amazon Tours</a>
               </li>
             </ul>
@@ -87,7 +87,7 @@ function Footer() {
               <li>
                 <a href="#">Reload Your Balance</a>
               </li>
-              <li class="nav_last">
+              <li className="nav_last">
                 <a href="#">Amazon Currency Converter</a>
               </li>
             </ul>
@@ -120,7 +120,7 @@ function Footer() {
               <li>
                 <a href="#">Amazon Assistant</a>
               </li>
-              <li class="nav_last">
+              <li className="nav_last">
                 <a href="#">Help</a>
               </li>
             </ul>
@@ -131,45 +131,42 @@ function Footer() {
       <div className="footer__line"></div>
 
       <div className="footer__author">
-      <img
+        <img
           className="footer__logo"
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
           alt="logo-img"
         />
 
-        <p>Amazon Fake Clone made by <a href="https://andre-portfolio.vercel.app" target="_blank">Andre Peixoto</a></p>
+        <p>
+          Amazon Fake Clone made by{' '}
+          <a href="https://andre-portfolio.vercel.app" target="_blank">
+            Andre Peixoto
+          </a>
+        </p>
       </div>
 
       <div className="footer__bottom">
-          <div className="footer__column">
-            <ul>
-          
+        <div className="footer__column">
+          <ul>
             <li>
-            <a href="#">
-                Conditions of Use
-              </a>
+              <a href="#">Conditions of Use</a>
             </li>
-          
+
             <li>
-              <a href="#">
-                Privacy Notice
-              </a>
+              <a href="#">Privacy Notice</a>
             </li>
-          
+
             <li>
-              <a href="#">
-                Interest-Based Ads
-              </a>
+              <a href="#">Interest-Based Ads</a>
             </li>
-          
+
             <li className="footer__copyright">
               © 1996-2020, Amazon-Fake-Clone, Inc. or its affiliates
             </li>
           </ul>
-          </div>
-          
         </div>
       </div>
+    </div>
   );
 }
 

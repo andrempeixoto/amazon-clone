@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import "./Login.css";
-import { Link, useHistory } from "react-router-dom";
-import { auth } from "./firebase";
+import React, { useState } from 'react';
+import './Login.css';
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from './firebase';
 
 function Login() {
   const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const signIn = (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ function Login() {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        history.push("/");
+        history.push('/');
       })
       .catch((error) => alert(error.message));
   };
@@ -28,7 +28,7 @@ function Login() {
         // it successfully created a new user with email and password
         console.log(auth);
         if (auth) {
-          history.push("/");
+          history.push('/');
         }
       })
       .catch((error) => alert(error.message));
@@ -71,12 +71,12 @@ function Login() {
         </form>
 
         <p>
-          By continuing, you agree to Amazon FAKE CLONE{" "}
+          By continuing, you agree to Amazon FAKE CLONE{' '}
           <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
         </p>
       </div>
 
-      <div class="login__container-divider">
+      <div className="login__container-divider">
         <small>New to Amazon?</small>
       </div>
 

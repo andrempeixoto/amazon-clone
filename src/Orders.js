@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { db } from "./firebase";
-import "./Orders.css";
-import { useStateValue } from "./StateProvider";
-import Order from "./Order";
+import React, { useEffect, useState } from 'react';
+import { db } from './firebase';
+import './Orders.css';
+import { useStateValue } from './StateProvider';
+import Order from './Order';
 
 function Orders() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -10,10 +10,10 @@ function Orders() {
 
   useEffect(() => {
     if (user) {
-      db.collection("users")
+      db.collection('users')
         .doc(user?.uid)
-        .collection("orders")
-        .orderBy("created", "desc")
+        .collection('orders')
+        .orderBy('created', 'desc')
         .onSnapshot((snapshot) =>
           setOrders(
             snapshot.docs.map((doc) => ({
